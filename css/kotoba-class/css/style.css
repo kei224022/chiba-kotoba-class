@@ -1,0 +1,162 @@
+/* ===== 共通設定 ===== */
+body {
+  font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #fffaf5; /* やわらかいアイボリー */
+  color: #333;
+}
+
+/* ===== ヘッダー（2段構成） ===== */
+header {
+  background-color: #8ab6d6; /* くすみブルー */
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ヘッダー1段目：ロゴとタイトル */
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  padding: 0.3em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.site-title {
+  font-size: 1.8em;
+  margin: 0;
+}
+
+/* ヘッダー2段目：ナビゲーションバー */
+.header-nav {
+  background-color: #79a6c6; /* 少し暗めで区別 */
+  text-align: center;
+  padding: 0.5em 0;
+}
+
+.header-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.header-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.header-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== メインコンテンツ ===== */
+main {
+  padding: 2em;
+  max-width: 800px;
+  margin: auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+}
+
+main section {
+  margin-bottom: 2.5em;
+}
+
+h1, h2 {
+  color: #5a3e36; /* 温かみのある落ち着いたブラウン */
+}
+
+/* ===== フッター全体 ===== */
+footer {
+  background-color: #5a7fa6; /* 🔧 落ち着いた濃いブルーグレーに変更 */
+  color: #ffffff;            /* 🔧 白文字に統一 */
+  font-size: 0.95em;         /* 🔧 少し小さめで読みやすいサイズ */
+  padding: 2em 1em 1em;      /* 🔧 上部に余白追加 */
+  margin-top: 3em;           /* ✅ 既存と同じ */
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+
+/* ===== 画像レスポンシブ対応（必要に応じて） ===== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== ➕ フッター内部：2カラム構成 ===== */
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: auto;
+  gap: 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 240px;
+}
+
+.footer-title {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-right li {
+  margin-bottom: 0.5em;
+}
+
+.footer-right a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+/* ===== ➕ フッター最下部（著作権など） ===== */
+.footer-bottom {
+  text-align: center;
+  padding-top: 1em;
+  font-size: 0.85em;
+  color: #dddddd;
+}
