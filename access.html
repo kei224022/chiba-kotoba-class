@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>アクセス - ことば・きこえの教室</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <section>
+      <h2>アクセス</h2>
+      <p>ことば・きこえの教室（千葉市立院内小学校内）</p>
+      <p>住所：千葉市中央区院内1丁目10−1</p>
+      <p>電話：043-XXX-XXXX</p>
+    </section>
+
+    <section>
+      <h3>地図</h3>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.6501127375883!2d140.1232171152589!3d35.61036288020964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60228044f2186f91%3A0x1a27cd74116e6b4e!2z5aSn5a2m5biC5Lit5aSu5Yy65aC0!5e0!3m2!1sja!2sjp!4v1719225327755!5m2!1sja!2sjp" 
+        width="100%" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </section>
+
+    <section>
+      <h3>アクセス方法</h3>
+      <ul>
+        <li>JR千葉駅から徒歩15分</li>
+        <li>千葉都市モノレール「県庁前」駅から徒歩10分</li>
+        <li>駐車場のご用意はありませんので、公共交通機関をご利用ください</li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch('header.html').then(res => res.text()).then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+    fetch('footer.html').then(res => res.text()).then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+  </script>
+</body>
+</html>

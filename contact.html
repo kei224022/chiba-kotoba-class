@@ -3,28 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>お問い合わせ</title>
+  <title>相談フォーム - ことば・きこえの教室</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <h1>お問い合わせ</h1>
-    <nav>
-      <a href="index.html">ホーム</a>
-      <a href="contact.html">お問い合わせ</a>
-    </nav>
-  </header>
+  <div id="header"></div>
 
   <main>
-    <p>以下のフォームからご連絡ください。</p>
-    <iframe src="https://docs.google.com/forms/d/e/your-form-id/viewform?embedded=true" 
-            width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">
-      読み込んでいます…
-    </iframe>
+    <section>
+      <h2>相談フォーム</h2>
+      <p>ことば・きこえに関するご相談はこちらのフォームから受け付けています。必要事項をご記入のうえ、送信してください。</p>
+    </section>
+
+    <section>
+      <!-- ✅ Googleフォームの埋め込みURLに差し替えてください -->
+      <iframe 
+        src="https://docs.google.com/forms/d/e/XXXXXXXXXXXXXXX/viewform?embedded=true" 
+        width="100%" 
+        height="1000" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0">
+        読み込んでいます…
+      </iframe>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 ことばの教室</p>
-  </footer>
+  <div id="footer"></div>
+
+  <script>
+    fetch('header.html').then(res => res.text()).then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+    fetch('footer.html').then(res => res.text()).then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ことばの教室とは - ことば・きこえの教室</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <section>
+      <h2>ことばの教室とは</h2>
+      <p>「ことば・きこえの教室」は、ことばの発達や聞こえに不安のあるお子さんや保護者の方を対象に、専門的な支援を行う場です。</p>
+    </section>
+
+    <section>
+      <h3>主な支援内容</h3>
+      <ul>
+        <li>発音や表現の指導</li>
+        <li>ことばの理解や表現のサポート</li>
+        <li>きこえに関する相談</li>
+        <li>保護者や学校との連携</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>対象となるお子さん</h3>
+      <p>ことばが遅れている、発音が不明瞭、聞き返しが多い、会話のやりとりが苦手など、心配な点がある場合にご相談ください。</p>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch('header.html').then(res => res.text()).then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+    fetch('footer.html').then(res => res.text()).then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+  </script>
+</body>
+</html>
