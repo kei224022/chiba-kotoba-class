@@ -1,4 +1,4 @@
-/* 基本設定 */
+/* ===== 共通設定 ===== */
 body {
   font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   margin: 0;
@@ -8,26 +8,29 @@ body {
   color: #333;
 }
 
-/* ヘッダー */
+/* ===== ヘッダー（2段構成） ===== */
 header {
   background-color: #8ab6d6; /* くすみブルー */
-  color: #fff;
-  padding: 1.5em 1em;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.header-container {
+/* ヘッダー1段目：ロゴとタイトル */
+.header-top {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1em;
+  padding: 1em;
 }
 
 .logo {
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  background-color: #fff;
-  padding: 0.2em;
+  background-color: #ffffff;
+  padding: 0.3em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .site-title {
@@ -35,50 +38,55 @@ header {
   margin: 0;
 }
 
-/* ナビゲーション */
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 1em 0 0 0;
-  display: flex;
-  justify-content: center;
-  gap: 1.5em;
+/* ヘッダー2段目：ナビゲーションバー */
+.header-nav {
+  background-color: #79a6c6; /* 少し暗めで区別 */
+  text-align: center;
+  padding: 0.5em 0;
 }
 
-nav a {
-  color: #fff;
+.header-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.header-nav a {
+  color: white;
   text-decoration: none;
   font-weight: bold;
-  padding: 0.3em 0.5em;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
   transition: background-color 0.3s;
 }
 
-nav a:hover {
+.header-nav a:hover {
   background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
 }
 
-/* メイン */
+/* ===== メインコンテンツ ===== */
 main {
   padding: 2em;
   max-width: 800px;
   margin: auto;
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
   border-radius: 8px;
 }
 
-/* セクション */
 main section {
   margin-bottom: 2.5em;
 }
 
-/* 見出し */
 h1, h2 {
-  color: #5a3e36; /* 落ち着いたブラウン */
+  color: #5a3e36; /* 温かみのある落ち着いたブラウン */
 }
 
-/* フッター */
+/* ===== フッター ===== */
 footer {
   background-color: #8ab6d6;
   color: white;
@@ -95,4 +103,10 @@ footer a {
 
 footer a:hover {
   text-decoration: none;
+}
+
+/* ===== 画像レスポンシブ対応（必要に応じて） ===== */
+img {
+  max-width: 100%;
+  height: auto;
 }
