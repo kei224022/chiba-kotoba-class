@@ -7,26 +7,50 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <h1>ことばの教室</h1>
-    <nav>
-      <a href="index.html">ホーム</a>
-      <a href="contact.html">お問い合わせ</a>
-    </nav>
-  </header>
+
+  <!-- ヘッダーを読み込む -->
+  <div id="header"></div>
 
   <main>
     <section>
       <h2>ようこそ</h2>
-      <p>こちらは千葉市の「ことばの教室」のホームページです。</p>
+      <p>こちらは千葉市の「ことばの教室」のホームページです。お子様の言語発達を支援します。</p>
     </section>
-    <img src="images/logo.png" alt="教室のロゴ" width="200">
+
+    <section>
+      <h2>教室の紹介</h2>
+      <p>「ことばの教室」では、発音や会話に困りごとのあるお子様に専門的な支援を提供しています。</p>
+    </section>
+
+    <section>
+      <h2>支援の内容</h2>
+      <ul>
+        <li>個別の発音トレーニング</li>
+        <li>集団での会話練習</li>
+        <li>保護者向けサポート</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>アクセス</h2>
+      <p>千葉市中央区 ○○丁目 △△番地 教育センター内</p>
+      <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 ことばの教室</p>
-  </footer>
+  <!-- フッターを読み込む -->
+  <div id="footer"></div>
 
   <script src="js/script.js"></script>
+  <script>
+    // headerとfooterを読み込む（JavaScript）
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('header').innerHTML = data);
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+  </script>
 </body>
 </html>
