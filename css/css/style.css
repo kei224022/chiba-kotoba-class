@@ -86,14 +86,13 @@ h1, h2 {
   color: #5a3e36; /* 温かみのある落ち着いたブラウン */
 }
 
-/* ===== フッター ===== */
+/* ===== フッター全体 ===== */
 footer {
-  background-color: #8ab6d6;
-  color: white;
-  text-align: center;
-  padding: 1.2em 1em;
-  font-size: 0.9em;
-  margin-top: 3em;
+  background-color: #5a7fa6; /* 🔧 落ち着いた濃いブルーグレーに変更 */
+  color: #ffffff;            /* 🔧 白文字に統一 */
+  font-size: 0.95em;         /* 🔧 少し小さめで読みやすいサイズ */
+  padding: 2em 1em 1em;      /* 🔧 上部に余白追加 */
+  margin-top: 3em;           /* ✅ 既存と同じ */
 }
 
 footer a {
@@ -109,4 +108,55 @@ footer a:hover {
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* ===== ➕ フッター内部：2カラム構成 ===== */
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: auto;
+  gap: 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 240px;
+}
+
+.footer-title {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-right li {
+  margin-bottom: 0.5em;
+}
+
+.footer-right a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+/* ===== ➕ フッター最下部（著作権など） ===== */
+.footer-bottom {
+  text-align: center;
+  padding-top: 1em;
+  font-size: 0.85em;
+  color: #dddddd;
 }
